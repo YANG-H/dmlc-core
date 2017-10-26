@@ -19,6 +19,7 @@ if(GTEST_FOUND)
     enable_testing()
     file(GLOB_RECURSE UNIT_TEST_SOURCE "*.cc")
     include_directories(cpp/include)
+    include_directories(${GTEST_INCLUDE_DIR})
     add_executable(${PROJECT_NAME}_unit_tests ${UNIT_TEST_SOURCE})
     set_property(TARGET ${PROJECT_NAME}_unit_tests
             PROPERTY RUNTIME_OUTPUT_DIRECTORY ${PRIVATE_RUNTIME_DIR})
